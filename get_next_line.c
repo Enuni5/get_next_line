@@ -6,7 +6,12 @@
 /*   By: enunez-n <enunez-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 12:08:56 by enunez-n          #+#    #+#             */
-/*   Updated: 2022/05/03 12:08:56 by enunez-n         ###   ########.fr       */
+/*   Updated: 2022/05/03 15:46:41 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "get_next_line.h"
+
+char	*get_next_line(int fd)
+{
+}

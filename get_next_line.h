@@ -6,11 +6,14 @@
 /*   By: enunez-n <enunez-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 12:08:52 by enunez-n          #+#    #+#             */
-/*   Updated: 2022/05/03 15:41:58 by enunez-n         ###   ########.fr       */
+/*   Updated: 2022/05/03 15:46:48 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
-#def GET_NEXT_LINE_H
+# def GET_NEXT_LINE_H
 
+# include <stdlib.h>
+
+char	*get_next_line(int fd);
 #endif
