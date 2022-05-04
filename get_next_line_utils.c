@@ -6,7 +6,7 @@
 /*   By: enunez-n <enunez-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 12:08:58 by enunez-n          #+#    #+#             */
-/*   Updated: 2022/05/03 15:58:24 by enunez-n         ###   ########.fr       */
+/*   Updated: 2022/05/04 09:47:36 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,36 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	while (i < (ft_strlen(s1) + ft_strlen(s2)))
 	{
-		while (s1[++i])
+		while (s1[i])
+		{
 			strjoined[i] = s1[i];
-		while (s2[++j])
+			i++;
+		}
+		while (s2[j])
+		{
 			strjoined[i] = s2[j];
+			j++;
+		}
 	}
 	strjoined[i] = '\0';
 	return (strjoined);
 }
+
+char	*ft_strchr(const char *s, int c)
+{
+	char	*ptr;
+	int		i;
+
+	ptr = (char *)s;
+	i = 0;
+	while (ptr[i])
+	{
+		if (ptr[i] == (unsigned char)c)
+			return (ptr + i);
+		i++;
+	}
+	if (c == '\0')
+		return (ptr + i);
+	return (0);
+}
+

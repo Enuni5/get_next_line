@@ -6,7 +6,7 @@
 /*   By: enunez-n <enunez-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 12:08:52 by enunez-n          #+#    #+#             */
-/*   Updated: 2022/05/03 15:46:48 by enunez-n         ###   ########.fr       */
+/*   Updated: 2022/05/04 09:47:27 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,9 @@
 
 # include <stdlib.h>
 
-char	*get_next_line(int fd);
+size_t	ft_strlen(const char *s);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strjoin(char const *s1, char const *s2);
+
+
 #endif
