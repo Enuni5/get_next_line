@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enunez-n <enunez-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 12:08:56 by enunez-n          #+#    #+#             */
-/*   Updated: 2022/05/06 12:47:00 by enunez-n         ###   ########.fr       */
+/*   Updated: 2022/05/06 12:50:14 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*buffsave;
+	static char	*buffsave[4096];
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || fd > 4096 || BUFFER_SIZE <= 0)
 		return (NULL);
-	buffsave = ft_save_buffer(fd, buffsave);
-	if (!buffsave)
+	buffsave[fd] = ft_save_buffer(fd, buffsave[fd]);
+	if (!buffsave[fd])
 		return (NULL);
-	line = ft_get_line(buffsave);
-	buffsave = ft_clean_save(buffsave);
+	line = ft_get_line(buffsave[fd]);
+	buffsave[fd] = ft_clean_save(buffsave[fd]);
 	return (line);
 }
 
